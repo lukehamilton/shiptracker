@@ -25,6 +25,9 @@ angular
       .when '/about',
         templateUrl: 'views/about.html'
         controller: 'AboutCtrl'
+      .when '/vessels',
+        templateUrl: 'views/vessels.html'
+        controller: 'VesselsCtrl'
       .otherwise
         redirectTo: '/'
 
