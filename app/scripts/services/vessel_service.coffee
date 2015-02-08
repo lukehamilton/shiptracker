@@ -1,11 +1,8 @@
 angular.module( 'shiptrackerApp' ).factory 'vesselService', ($http) ->
 
-  getVessels: () ->
+  getVessels: (callback) ->
     $http.get('http://shiptrackerapimocks.mtnsat.com/api/vessels').
       success( (data, status, headers, config) ->
-        console.log 'SUCCESS', data
+        callback null, data
       ).error (data, status, headers, config) ->
-        console.log 'ERROR'
-
-	test: ()->
-		console.log 'Test vessel service'
+        callback data

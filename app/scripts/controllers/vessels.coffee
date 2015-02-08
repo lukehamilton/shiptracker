@@ -10,4 +10,8 @@
 angular.module 'shiptrackerApp'
   .controller 'VesselsCtrl', ($scope, vesselService) ->
     
-    vesselService.getVessels()
+    vesselService.getVessels (err, vessels) ->
+      $scope.vessels = vessels
+
+
+    
