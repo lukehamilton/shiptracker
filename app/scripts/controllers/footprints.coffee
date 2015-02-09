@@ -8,19 +8,19 @@
  # Controller of the shiptrackerApp
 ###
 angular.module 'shiptrackerApp'
-  .controller 'VesselsCtrl', ($scope, vesselService) ->
-    
+  .controller 'FootprintsCtrl', ($scope, footprintService) ->
+
     $scope.gridOptions1 =
       enableSorting: true
       enableFiltering: true
       columnDefs: [
         { field: "id", }
         { field: "name" }
-        { field: "customer_name" }
-        { field: "status" }
-        { field: "latitude" }
-        { field: "longitude" }
+        { field: "band" }
+        { field: "color_rgb" }
+        { field: "network_id" }
+        { field: "geographic_bounds" }
       ]
 
-    vesselService.getVessels (err, vessels) ->
-      $scope.gridOptions1.data = vessels
+    footprintService.getFootprints (err, footprints) ->
+      $scope.gridOptions1.data = footprints

@@ -29,6 +29,12 @@ angular
       .when '/vessels',
         templateUrl: 'views/vessels.html'
         controller: 'VesselsCtrl'
+      .when '/footprints',
+        templateUrl: 'views/footprints.html'
+        controller: 'FootprintsCtrl'
+      .when '/devices',
+        templateUrl: 'views/devices.html'
+        controller: 'DevicesCtrl'
       .otherwise
         redirectTo: '/'
 
